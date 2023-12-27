@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.username {
+  font-weight: 700;
+  color: #fff;
+}
+
+.logOutBtn {
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 700;
+  border: none;
+}
+
+.logOutBtn:hover,
+.logOutBtn:focus {
+  background-color: rgb(47, 114, 123);
+  color: #fff;
+}

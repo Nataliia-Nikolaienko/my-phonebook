@@ -1,0 +1,47 @@
+.listItemWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.contactListItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+  color: #000000;
+  background-color: rgb(222, 222, 222);
+  padding: 5px 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 1px 25px rgb(97, 152, 152);
+}
+
+.contactListItem:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 16px;
+  min-width: 300px;
+}
+
+.telefon {
+  font-size: 16px;
+  min-width: 300px;
+}
+
+.btnDelete {
+  font-size: 14px;
+  color: white;
+  padding: 10px 20px;
+  background-color: rgb(223, 40, 77);
+  border: none;
+  border-radius: 10px;
+}
+
+.btnDelete:hover,
+.btnDelete:focus {
+  background-color: rgb(161, 11, 41);
+}
