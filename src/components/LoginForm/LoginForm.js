@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { LoginOutlined } from '@ant-design/icons';
 import { logIn } from '../../redux/auth/operations';
 import css from './LoginForm.module.css';
 
@@ -47,6 +48,7 @@ export const LoginForm = () => {
           />
         </label>
         <button type="submit" className={css.loginBtn}>
+          <LoginOutlined className={css.icon} />
           Log In
         </button>
         <p>

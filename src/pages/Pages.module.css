@@ -1,0 +1,96 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  min-height: calc(100vh - 50px);
+  padding-top: 40px;
+}
+
+.formWrapper {
+  width: 340px;
+  height: 225px;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.descr {
+  font-weight: 500;
+  font-size: 28px;
+  text-align: center;
+}
+
+.description {
+  font-weight: 500;
+  font-size: 48px;
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  color: darkcyan;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  &:hover,
+  &:focus {
+    color: rgb(78, 207, 207);
+  }
+}
+
+.contactsTitle {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.registerContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.contactFormContainer {
+  margin-bottom: 30px;
+}
+
+.contactsWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.addContactBtn {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px 12px;
+  border: none;
+  background-color: rgb(107, 182, 107);
+
+  &:hover,
+  &:focus {
+    background-color: rgb(143, 208, 137);
+  }
+}

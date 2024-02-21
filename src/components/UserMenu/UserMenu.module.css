@@ -10,6 +10,8 @@
 }
 
 .logOutBtn {
+  display: flex;
+  align-items: center;
   padding: 10px 15px;
   border-radius: 10px;
   font-weight: 700;
@@ -20,4 +22,8 @@
 .logOutBtn:focus {
   background-color: rgb(47, 114, 123);
   color: #fff;
+}
+
+.icon {
+  margin-right: 5px;
 }

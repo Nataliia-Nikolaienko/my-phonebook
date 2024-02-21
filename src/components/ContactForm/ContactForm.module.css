@@ -1,8 +1,37 @@
-.formWrapper {
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  min-width: 470px;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1200;
+}
+
+.formWrapper {
+  position: relative;
+}
+
+.modalCloseBtn {
+  position: absolute;
+  top: 8px;
+  inset-inline-end: 8px;
+  z-index: 1000;
+  padding: 0;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    font-size: 20px;
+  }
 }
 
 .phonebookTitle {
@@ -14,8 +43,7 @@
 .form {
   background-color: rgb(206, 206, 206);
   text-align: center;
-  width: 60%;
-  padding: 10px 60px;
+  padding: 10px 100px;
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 0 1px 25px rgb(97, 152, 152);
@@ -42,6 +70,7 @@
   border-radius: 10px;
   padding: 5px;
   border: 1px solid black;
+  outline: none;
 }
 
 .btnCreate {
@@ -50,12 +79,11 @@
   padding: 10px;
   margin-top: 20px;
   border: none;
-  color: white;
   border-radius: 10px;
-  background-color: rgb(107, 150, 103);
-}
+  background-color: rgb(107, 182, 107);
 
-.btnCreate:hover,
-.btnCreate:focus {
-  background-color: rgb(49, 100, 42);
+  &:hover,
+  &:focus {
+    background-color: rgb(143, 208, 137);
+  }
 }

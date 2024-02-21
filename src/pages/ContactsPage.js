@@ -1,30 +1,14 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Helmet } from 'react-helmet';
+import { PlusCircleOutlined } from '@ant-design/icons';
 import ContactList from '../components/ContactList/ContactList';
 import ContactForm from '../components/ContactForm/ContactForm';
 import Loader from '../components/Loader/Loader';
+import useModal from '../hooks/useModal';
 import { fetchContacts } from '../redux/contacts/operations';
 import { selectIsLoading } from '../redux/contacts/selectors';
 import Filter from '../components/Filter/Filter';
-
-const styles = {
-  container: {
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-  contactsWrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    minWidth: '470px',
-  },
-  contactsTitle: {
-    fontSize: 30,
-    marginBottom: 20,
-    marginTop: 60,
-    textAlign: 'center',
-  },
-};
+import css from './Pages.module.css';
 
 export default function ContactsPage() {
   const dispatch = useDispatch();
@@ -34,18 +18,27 @@ export default function ContactsPage() {
     dispatch(fetchContacts());
   }, [dispatch]);
 
+  const { isShowing, toggle } = useModal();
+
+  const modalClose = e => {
+    if (e.code === 'Escape' || e.currentTarget === e.target) {
+      toggle();
+    }
+  };
+
   return (
     <>
-      <Helmet>
-        <title>Your contacts</title>
-      </Helmet>
-      <div style={styles.container}>
-        <ContactForm />
+      <h2 className={css.contactsTitle}>Your contacts</h2>
+      <div className={css.contactFormContainer}>
         <Filter />
+        <button className={css.addContactBtn} onClick={toggle}>
+          <PlusCircleOutlined className={css.icon} />
+          Add contact
+        </button>
+        <ContactForm isShowing={isShowing} hide={toggle} onClose={modalClose} />
       </div>
 
-      <div style={styles.contactsWrapper}>
-        <h2 style={styles.contactsTitle}>Your contacts</h2>
+      <div className={css.contactsWrapper}>
         {isLoading ? <Loader /> : <ContactList />}
       </div>
     </>

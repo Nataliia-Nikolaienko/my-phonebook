@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+import { DeleteOutlined, UserOutlined, PhoneOutlined } from '@ant-design/icons';
 import { deleteContact } from '../../redux/contacts/operations';
 import css from './Contact.module.css';
 
@@ -11,11 +12,16 @@ const Contact = ({ contact }) => {
   return (
     <>
       <li className={css.contactListItem}>
-        {/* <div className={css.listItemWrapper}> */}
-        <p className={css.name}>{contact.name}</p>
-        <p className={css.telefon}>{contact.number}</p>
-        {/* </div> */}
+        <p className={css.name}>
+          <UserOutlined className={css.icon} />
+          {contact.name}
+        </p>
+        <p className={css.telefon}>
+          <PhoneOutlined className={css.icon} />
+          {contact.number}
+        </p>
         <button onClick={handleDelete} className={css.btnDelete}>
+          <DeleteOutlined className={css.icon} />
           Delete
         </button>
       </li>

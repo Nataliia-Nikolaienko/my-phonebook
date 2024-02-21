@@ -25,7 +25,7 @@
   background-color: rgb(206, 206, 206);
   border-radius: 10px;
   border: 1px solid #000;
-  margin-top: 5px;
+  margin-top: 10px;
   box-shadow: 0 1px 25px rgb(97, 152, 152);
 }
 
@@ -44,6 +44,8 @@
 }
 
 .registerBtn {
+  display: flex;
+  align-items: center;
   font-weight: 600;
   padding: 5px 20px;
   margin-bottom: 10px;
@@ -67,4 +69,8 @@
 .loginLink:hover,
 .loginLink:focus {
   color: #fff;
+}
+
+.icon {
+  margin: 5px;
 }

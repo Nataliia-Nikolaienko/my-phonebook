@@ -1,16 +1,10 @@
 import { Helmet } from 'react-helmet';
 import { RegistrationForm } from '../components/RegistrationForm/RegistrationForm';
-
-const styles = {
-  registerContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-  },
-};
+import css from './Pages.module.css';
 
 export default function RegistrationPage() {
   return (
-    <div style={styles.registerContainer}>
+    <div className={css.registerContainer}>
       <Helmet>
         <title>Registration</title>
       </Helmet>

@@ -1,5 +1,10 @@
+.authNavWrap {
+  display: flex;
+}
+
 .link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   padding: 12px;
   font-weight: 700;
@@ -9,4 +14,8 @@
 .link:hover,
 .link:focus {
   color: darkcyan;
+}
+
+.icon {
+  margin-right: 5px;
 }

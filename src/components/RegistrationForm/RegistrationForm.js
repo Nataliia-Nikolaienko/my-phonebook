@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { UserAddOutlined } from '@ant-design/icons';
 import { register } from '../../redux/auth/operations';
 import css from './RegistrationForm.module.css';
 
@@ -59,6 +60,7 @@ export const RegistrationForm = () => {
           />
         </label>
         <button type="submit" className={css.registerBtn}>
+          <UserAddOutlined className={css.icon} />
           Register
         </button>
         <p>

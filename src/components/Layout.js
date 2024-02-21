@@ -7,7 +7,7 @@ export const Layout = () => {
   return (
     <>
       <AppBar />
-      <div style={{ maxWidth: 1000, margin: '0 auto', padding: '20px 16px' }}>
+      <div style={{ padding: '30px 16px' }}>
         <Suspense fallback={null}>
           <Outlet />
         </Suspense>
